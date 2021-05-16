@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	background-image: url("images/background-img-01.jpg");
+	font-family: helvetica, sans-serif;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+.flip-card-outer {
+	height: 300px;
+	width: 300px;
+	background-color: transparent;
+	perspective: 1000px;
+	margin: 150px auto;
+}
+
+.flip-card-inner {
+	height: 300px;
+	width: 300px;
+	text-align: center;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+.flip-card-outer:hover .flip-card-inner {
+	transform: rotateY(-180deg);
+}
+
+.front, .back {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+.back {
+	background-color: #255f93;
+	color: #fff;
+	padding: 30px 15px;
+	transform: rotateY(-180deg);
+}
